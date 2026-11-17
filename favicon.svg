@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#1a1a1a"/>
+  <path d="M128 20L220 70V186L128 236L36 186V70Z" fill="#6B2FBE" stroke="#FFD700" stroke-width="4"/>
+  <circle cx="128" cy="128" r="45" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <circle cx="128" cy="128" r="6" fill="#FFD700"/>
+  <circle cx="100" cy="110" r="5" fill="#FFD700"/>
+  <circle cx="156" cy="110" r="5" fill="#FFD700"/>
+  <circle cx="90" cy="140" r="5" fill="#FFD700"/>
+  <circle cx="166" cy="140" r="5" fill="#FFD700"/>
+  <circle cx="110" cy="155" r="4" fill="#FFD700"/>
+  <circle cx="146" cy="155" r="4" fill="#FFD700"/>
+  <line x1="128" y1="128" x2="100" y2="110" stroke="#FFD700" stroke-width="2"/>
+  <line x1="128" y1="128" x2="156" y2="110" stroke="#FFD700" stroke-width="2"/>
+  <line x1="128" y1="128" x2="90" y2="140" stroke="#FFD700" stroke-width="2"/>
+  <line x1="128" y1="128" x2="166" y2="140" stroke="#FFD700" stroke-width="2"/>
+  <line x1="100" y1="110" x2="90" y2="140" stroke="#FFD700" stroke-width="1.5"/>
+  <line x1="156" y1="110" x2="166" y2="140" stroke="#FFD700" stroke-width="1.5"/>
+  <line x1="90" y1="140" x2="110" y2="155" stroke="#FFD700" stroke-width="1.5"/>
+  <line x1="166" y1="140" x2="146" y2="155" stroke="#FFD700" stroke-width="1.5"/>
+  <path d="M105 95Q128 85 151 95" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
