@@ -80,9 +80,9 @@
         <a href="#agentes" class="text-sm font-medium text-gray-300 hover:text-[#FFD700] transition-colors">Agentes de IA</a>
         <a href="#solucoes" class="text-sm font-medium text-gray-300 hover:text-[#FFD700] transition-colors">Soluções</a>
         <a href="#contato" class="text-sm font-medium text-gray-300 hover:text-[#FFD700] transition-colors">Contato</a>
-        <a href="https://wa.me/5511973340891?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Quantum%20Automa%C3%A7%C3%B5es%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#6d28d9] border border-[#a78bfa]/35 text-white text-sm font-semibold shadow-[0_0_24px_rgba(139,92,246,0.4)] hover:shadow-[0_0_32px_rgba(139,92,246,0.7)] transition-all">
+        <button type="button" onclick="openMaxChat()" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#6d28d9] border border-[#a78bfa]/35 text-white text-sm font-semibold shadow-[0_0_24px_rgba(139,92,246,0.4)] hover:shadow-[0_0_32px_rgba(139,92,246,0.7)] transition-all cursor-pointer">
           Solicitar Orçamento →
-        </a>
+        </button>
       </div>
     </div>
   </nav>
@@ -122,10 +122,10 @@
 
       <!-- Action Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-        <a href="https://wa.me/5511973340891?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20gratuito%20de%20automa%C3%A7%C3%A3o%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#7c3aed] to-[#5b21b6] border border-[#a78bfa]/40 text-white font-bold text-base shadow-[0_0_32px_rgba(139,92,246,0.45)] hover:shadow-[0_0_45px_rgba(139,92,246,0.75)] transition-all duration-300 hover:scale-105">
+        <button type="button" onclick="openMaxChat()" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#7c3aed] to-[#5b21b6] border border-[#a78bfa]/40 text-white font-bold text-base shadow-[0_0_32px_rgba(139,92,246,0.45)] hover:shadow-[0_0_45px_rgba(139,92,246,0.75)] transition-all duration-300 hover:scale-105 cursor-pointer">
           <span>Solicitar Diagnóstico Gratuito</span>
           <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </a>
+        </button>
         <a href="#portfolio" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-[#8b5cf6]/10 border border-[#8b5cf6]/40 text-slate-100 font-semibold text-base hover:bg-[#8b5cf6]/20 hover:border-[#FFD700]/60 transition-all duration-300">
           <span>🎬 Explorar Sistemas no Portfólio</span>
         </a>
@@ -342,18 +342,12 @@
             <input id="c-nome" type="text" required placeholder="Seu nome completo" class="w-full px-4 py-3 rounded-xl bg-[#1a1028] border border-[#6B2FBE]/25 text-white placeholder-gray-500 focus:border-[#FFD700] focus:outline-none" />
           </div>
           <div>
-            <label class="text-sm text-gray-400 mb-1 block">Empresa</label>
-            <input id="c-empresa" type="text" placeholder="Nome da sua empresa" class="w-full px-4 py-3 rounded-xl bg-[#1a1028] border border-[#6B2FBE]/25 text-white placeholder-gray-500 focus:border-[#FFD700] focus:outline-none" />
+            <label class="text-sm text-gray-400 mb-1 block">Empresa / Área de Atuação</label>
+            <input id="c-empresa" type="text" placeholder="Nome da sua empresa ou ramo" class="w-full px-4 py-3 rounded-xl bg-[#1a1028] border border-[#6B2FBE]/25 text-white placeholder-gray-500 focus:border-[#FFD700] focus:outline-none" />
           </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm text-gray-400 mb-1 block">WhatsApp *</label>
-              <input id="c-whats" type="tel" required placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-xl bg-[#1a1028] border border-[#6B2FBE]/25 text-white placeholder-gray-500 focus:border-[#FFD700] focus:outline-none" />
-            </div>
-            <div>
-              <label class="text-sm text-gray-400 mb-1 block">E-mail</label>
-              <input id="c-email" type="email" placeholder="seu@email.com" class="w-full px-4 py-3 rounded-xl bg-[#1a1028] border border-[#6B2FBE]/25 text-white placeholder-gray-500 focus:border-[#FFD700] focus:outline-none" />
-            </div>
+          <div>
+            <label class="text-sm text-gray-400 mb-1 block">WhatsApp *</label>
+            <input id="c-whats" type="tel" required placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-xl bg-[#1a1028] border border-[#6B2FBE]/25 text-white placeholder-gray-500 focus:border-[#FFD700] focus:outline-none" />
           </div>
           <div>
             <label class="text-sm text-gray-400 mb-1 block">Como podemos ajudar?</label>
@@ -369,11 +363,23 @@
         <div class="flex flex-col justify-center gap-6">
           <div>
             <h3 class="font-display font-bold text-2xl text-white mb-2">Vamos conversar sobre o seu projeto?</h3>
-            <p class="text-gray-400">Chame diretamente no WhatsApp para um diagnóstico rápido de automação para a sua empresa.</p>
+            <p class="text-gray-400">Inicie seu atendimento agora mesmo com o <strong class="text-[#FFD700]">Max (nosso Especialista em IA)</strong> aqui no site ou fale no WhatsApp.</p>
           </div>
 
+          <button type="button" onclick="openMaxChat()" class="w-full text-left flex items-center gap-4 bg-gradient-to-r from-[#1a0f36] to-[#120a26] border border-[#a78bfa]/45 rounded-2xl p-6 hover:border-[#FFD700]/70 hover:shadow-[0_0_30px_rgba(139,92,246,0.35)] transition-all group cursor-pointer">
+            <div class="relative w-14 h-14 rounded-2xl bg-[#6B2FBE]/30 border border-[#a78bfa]/40 flex items-center justify-center shrink-0">
+              <img src="./logo-shield.png" alt="Max IA" class="w-10 h-10 object-contain" />
+              <span class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#0f0a1a] animate-pulse"></span>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider text-[#FFD700]">Primeiro Atendimento Inteligente • 24h</p>
+              <p class="font-display font-bold text-xl text-white group-hover:text-[#FFD700] transition-colors">Falar com o Max (Especialista em IA) →</p>
+              <p class="text-xs text-slate-300 mt-0.5">Tire dúvidas e faça seu Diagnóstico Gratuito aqui no site</p>
+            </div>
+          </button>
+
           <a href="https://wa.me/5511973340891?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20da%20Quantum%20Automa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-[#0f0a1a] border border-green-500/30 rounded-2xl p-6 hover:border-green-500/60 hover:bg-green-500/5 transition-all group">
-            <div class="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center shrink-0">
               <i data-lucide="phone" class="w-7 h-7 text-green-400"></i>
             </div>
             <div>
@@ -383,22 +389,12 @@
           </a>
 
           <div class="flex items-center gap-4 bg-[#0f0a1a] border border-[#6B2FBE]/20 rounded-2xl p-6">
-            <div class="w-14 h-14 rounded-full bg-[#6B2FBE]/20 flex items-center justify-center">
-              <i data-lucide="mail" class="w-7 h-7 text-[#9B6FE0]"></i>
-            </div>
-            <div>
-              <p class="text-sm text-gray-400">E-mail Corporativo</p>
-              <p class="font-medium text-white">contato@quantumautomacoes.com</p>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-4 bg-[#0f0a1a] border border-[#6B2FBE]/20 rounded-2xl p-6">
-            <div class="w-14 h-14 rounded-full bg-[#6B2FBE]/20 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-[#6B2FBE]/20 flex items-center justify-center shrink-0">
               <i data-lucide="building-2" class="w-7 h-7 text-[#9B6FE0]"></i>
             </div>
             <div>
-              <p class="text-sm text-gray-400">Atendimento</p>
-              <p class="font-medium text-white">Segunda a Sexta, 9h às 18h</p>
+              <p class="text-sm text-gray-400">Atendimento em Todo o Brasil</p>
+              <p class="font-medium text-white">100% Online • Seg a Sex, 9h às 18h (Agente Max 24h)</p>
             </div>
           </div>
         </div>
@@ -417,10 +413,72 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/5511973340891?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Quantum%20Automa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-[0_0_25px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform">
-    <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
-  </a>
+  <!-- FLOATING MAX AI AGENT LAUNCHER & CHAT WIDGET -->
+  <div id="max-launcher-wrap" class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2.5">
+    <!-- Welcome Callout Bubble -->
+    <div id="max-welcome-bubble" onclick="openMaxChat()" class="cursor-pointer bg-[#140b29]/95 backdrop-blur-xl border border-[#a78bfa]/50 rounded-2xl px-4 py-3 shadow-[0_12px_35px_rgba(0,0,0,0.7),0_0_25px_rgba(139,92,246,0.3)] max-w-[270px] transition-all hover:border-[#FFD700]">
+      <div class="flex items-center justify-between gap-2 mb-1">
+        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#FFD700] uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Max • Especialista em IA
+        </span>
+        <button type="button" onclick="event.stopPropagation(); document.getElementById('max-welcome-bubble').classList.add('hidden');" class="text-xs text-gray-400 hover:text-white">✕</button>
+      </div>
+      <p class="text-xs text-slate-200 leading-snug">Olá! 👋 Quer automatizar sua empresa? Clique aqui para seu <strong class="text-white">Diagnóstico Gratuito</strong>!</p>
+    </div>
+
+    <!-- Floating Trigger Button -->
+    <button type="button" onclick="toggleMaxChat()" id="max-fab-btn" class="group relative flex items-center gap-3 pl-3 pr-5 py-2.5 rounded-full bg-gradient-to-r from-[#6B2FBE] via-[#7c3aed] to-[#5b21b6] border-2 border-[#FFD700]/70 text-white shadow-[0_0_30px_rgba(139,92,246,0.65)] hover:scale-105 transition-all cursor-pointer">
+      <div class="relative w-11 h-11 rounded-full bg-[#0d071b] border border-[#a78bfa]/50 flex items-center justify-center overflow-hidden">
+        <img src="./logo-shield.png" alt="Max IA" class="w-8 h-8 object-contain" />
+      </div>
+      <div class="text-left">
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-[10px] font-mono uppercase tracking-wider text-[#FFD700] font-bold">Online Agora</span>
+        </div>
+        <div class="font-display font-bold text-sm leading-tight">Falar com o Max (IA)</div>
+      </div>
+    </button>
+  </div>
+
+  <!-- MAX AI CHAT WINDOW -->
+  <div id="max-chat-window" class="fixed bottom-5 right-5 z-50 hidden w-[92vw] sm:w-[410px] h-[590px] max-h-[86vh] bg-[#0d071c]/95 backdrop-blur-2xl border border-[#a78bfa]/45 rounded-3xl shadow-[0_25px_70px_rgba(0,0,0,0.85),0_0_50px_rgba(124,58,237,0.35)] flex-col overflow-hidden">
+    <!-- Top Header -->
+    <div class="px-5 py-4 bg-gradient-to-r from-[#1a0d38] via-[#23114b] to-[#160a30] border-b border-[#8b5cf6]/30 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="relative w-11 h-11 rounded-2xl bg-[#090514] border border-[#FFD700]/50 flex items-center justify-center shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+          <img src="./logo-shield.png" alt="Max IA" class="w-8 h-8 object-contain" />
+          <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#090514]"></span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h4 class="font-display font-bold text-base text-white leading-none">Max</h4>
+            <span class="px-2 py-0.5 rounded-full bg-[#FFD700]/15 border border-[#FFD700]/40 text-[#FFD700] text-[10px] font-bold">Especialista em IA</span>
+          </div>
+          <p class="text-[11px] text-emerald-400 font-medium mt-1">● Quantum Automações • Atendimento 24h</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <button type="button" onclick="resetMaxChat()" title="Reiniciar conversa" class="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white text-xs cursor-pointer">↺</button>
+        <button type="button" onclick="closeMaxChat()" title="Fechar chat" class="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white text-sm cursor-pointer">✕</button>
+      </div>
+    </div>
+
+    <!-- Messages Area -->
+    <div id="max-messages" class="flex-1 overflow-y-auto p-4 space-y-3.5 text-sm"></div>
+
+    <!-- Quick Options Bar (dynamic) -->
+    <div id="max-quick-options" class="px-4 py-2 bg-[#120926]/90 border-t border-[#8b5cf6]/20 flex flex-wrap gap-1.5 max-h-[135px] overflow-y-auto"></div>
+
+    <!-- Input Form -->
+    <form onsubmit="handleMaxUserSubmit(event)" class="p-3 bg-[#090514] border-t border-[#8b5cf6]/30 flex items-center gap-2">
+      <input id="max-input" type="text" autocomplete="off" placeholder="Digite sua mensagem para o Max..." class="flex-1 px-4 py-3 rounded-2xl bg-[#160d2e] border border-[#8b5cf6]/35 text-white text-xs sm:text-sm placeholder-slate-400 focus:border-[#FFD700] focus:outline-none" />
+      <button type="submit" class="px-4 py-3 rounded-2xl bg-gradient-to-r from-[#7c3aed] to-[#5b21b6] hover:from-[#8b5cf6] hover:to-[#6d28d9] border border-[#a78bfa]/40 text-white font-bold text-xs sm:text-sm shadow-lg cursor-pointer">
+        Enviar →
+      </button>
+    </form>
+  </div>
 
   <script>
     const portfolioProjects = [
@@ -621,9 +679,9 @@
 
           <!-- Footer Actions -->
           <div class="px-5 sm:px-6 py-4 bg-[#140d24]/90 border-t border-[#6B2FBE]/20 flex items-center justify-end">
-            <a href="https://wa.me/5511973340891?text=${waText}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#FFD700] to-[#FFC200] text-[#0A0A0A] font-bold text-xs sm:text-sm hover:scale-105 transition-all">
+            <button type="button" onclick="openMaxForProject('${p.title}')" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#FFD700] to-[#FFC200] text-[#0A0A0A] font-bold text-xs sm:text-sm hover:scale-105 transition-all cursor-pointer">
               <span>Quero no Meu Negócio →</span>
-            </a>
+            </button>
           </div>
         </div>
         `;
@@ -684,6 +742,297 @@
       document.getElementById('slide-step-' + id).textContent = `Tela ${idx + 1} de 4 • Dados Protegidos (LGPD)`;
       document.getElementById('slide-title-' + id).textContent = s.title;
       document.getElementById('slide-sub-' + id).textContent = s.subtitle;
+    }
+
+
+    // =========================================================================
+    // MAX — ESPECIALISTA EM IA DA QUANTUM AUTOMAÇÕES (CONVERSATIONAL ENGINE)
+    // =========================================================================
+    const maxState = {
+      initialized: false,
+      step: 'ask_name', // 'ask_name' -> 'ask_need' -> 'ready_or_chat'
+      clientName: '',
+      clientCompany: '',
+      clientNeed: '',
+      projectInterest: '',
+      history: []
+    };
+
+    const quickNeedButtons = [
+      { label: '📊 Automatizar Planilhas, Compras e Notas (GTPLAN)', value: 'Quero automatizar planilhas, compras e conferência de notas fiscais (estilo GTPLAN)' },
+      { label: '🛡️ Auditoria de Documentos e Reembolsos com IA (AuditMed)', value: 'Quero automatizar a auditoria de documentos, recibos ou reembolsos com IA (estilo AuditMed)' },
+      { label: '🤖 Agente de IA para Atendimento 24h (WhatsApp/Site)', value: 'Quero um Agente de IA personalizado para atender meus clientes 24h' },
+      { label: '💻 Sistema Web ou Site de Alta Conversão', value: 'Quero criar um Sistema Web sob medida ou Site Profissional de Alta Conversão' },
+      { label: '💰 Como funciona o valor / Diagnóstico Gratuito?', value: 'Gostaria de saber como funciona o orçamento e o Diagnóstico Gratuito' }
+    ];
+
+    function openMaxChat() {
+      document.getElementById('max-welcome-bubble').classList.add('hidden');
+      document.getElementById('max-launcher-wrap').classList.add('hidden');
+      const win = document.getElementById('max-chat-window');
+      win.classList.remove('hidden');
+      win.classList.add('flex');
+      if (!maxState.initialized) {
+        maxState.initialized = true;
+        startMaxGreeting();
+      }
+      setTimeout(() => {
+        const inp = document.getElementById('max-input');
+        if (inp) inp.focus();
+      }, 200);
+    }
+
+    function closeMaxChat() {
+      const win = document.getElementById('max-chat-window');
+      win.classList.add('hidden');
+      win.classList.remove('flex');
+      document.getElementById('max-launcher-wrap').classList.remove('hidden');
+    }
+
+    function toggleMaxChat() {
+      const win = document.getElementById('max-chat-window');
+      if (win.classList.contains('hidden')) {
+        openMaxChat();
+      } else {
+        closeMaxChat();
+      }
+    }
+
+    function openMaxForProject(projectTitle) {
+      maxState.projectInterest = projectTitle;
+      openMaxChat();
+      if (maxState.step !== 'ask_name') {
+        handleMaxInputText(`Tenho interesse em uma solução parecida com: ${projectTitle}`);
+      }
+    }
+
+    function resetMaxChat() {
+      maxState.step = 'ask_name';
+      maxState.clientName = '';
+      maxState.clientCompany = '';
+      maxState.clientNeed = '';
+      maxState.history = [];
+      document.getElementById('max-messages').innerHTML = '';
+      document.getElementById('max-quick-options').innerHTML = '';
+      startMaxGreeting();
+    }
+
+    function appendMaxMessage(sender, htmlText) {
+      const box = document.getElementById('max-messages');
+      const wrap = document.createElement('div');
+      if (sender === 'max') {
+        wrap.className = 'flex items-start gap-2.5';
+        wrap.innerHTML = `
+          <div class="w-7 h-7 rounded-xl bg-[#1a0d36] border border-[#a78bfa]/40 flex items-center justify-center shrink-0 mt-0.5">
+            <img src="./logo-shield.png" class="w-5 h-5 object-contain" />
+          </div>
+          <div class="bg-[#180d32] border border-[#8b5cf6]/30 text-slate-100 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] leading-relaxed shadow-md">
+            ${htmlText}
+          </div>
+        `;
+      } else {
+        wrap.className = 'flex justify-end';
+        wrap.innerHTML = `
+          <div class="bg-gradient-to-r from-[#7c3aed] to-[#5b21b6] border border-[#a78bfa]/40 text-white rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[82%] leading-relaxed shadow-md">
+            ${htmlText}
+          </div>
+        `;
+      }
+      box.appendChild(wrap);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function showMaxTyping(callback, delay = 650) {
+      const box = document.getElementById('max-messages');
+      const typingId = 'max-typing-' + Date.now();
+      const wrap = document.createElement('div');
+      wrap.id = typingId;
+      wrap.className = 'flex items-center gap-2.5';
+      wrap.innerHTML = `
+        <div class="w-7 h-7 rounded-xl bg-[#1a0d36] border border-[#a78bfa]/40 flex items-center justify-center shrink-0">
+          <img src="./logo-shield.png" class="w-5 h-5 object-contain" />
+        </div>
+        <div class="bg-[#180d32] border border-[#8b5cf6]/25 text-[#c4b5fd] rounded-2xl px-4 py-2.5 text-xs flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#FFD700] animate-bounce"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#a78bfa] animate-bounce" style="animation-delay:0.15s"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-bounce" style="animation-delay:0.3s"></span>
+          <span class="ml-1 text-[11px] text-slate-400">Max está digitando...</span>
+        </div>
+      `;
+      box.appendChild(wrap);
+      box.scrollTop = box.scrollHeight;
+      setTimeout(() => {
+        const el = document.getElementById(typingId);
+        if (el) el.remove();
+        callback();
+      }, delay);
+    }
+
+    function renderMaxQuickButtons(buttons) {
+      const bar = document.getElementById('max-quick-options');
+      if (!buttons || !buttons.length) {
+        bar.innerHTML = '';
+        bar.classList.add('hidden');
+        return;
+      }
+      bar.classList.remove('hidden');
+      bar.innerHTML = buttons.map(b => `
+        <button type="button" onclick="handleMaxQuickClick('${b.value.replace(/'/g, "\'")}')" class="text-left text-[11px] font-medium px-3 py-1.5 rounded-xl bg-[#1d103b] hover:bg-[#6B2FBE] text-[#e2e8f0] hover:text-white border border-[#8b5cf6]/35 hover:border-[#FFD700]/60 transition-all cursor-pointer">
+          ${b.label}
+        </button>
+      `).join('');
+    }
+
+    function handleMaxQuickClick(val) {
+      handleMaxInputText(val);
+    }
+
+    function startMaxGreeting() {
+      renderMaxQuickButtons([]);
+      showMaxTyping(() => {
+        const extraProj = maxState.projectInterest
+          ? `<br/><br/>Vi que você se interessou pelo projeto <strong class="text-[#FFD700]">${maxState.projectInterest}</strong>!`
+          : '';
+        appendMaxMessage('max', `
+          Olá! 👋 Eu sou o <strong class="text-[#FFD700]">Max</strong>, Especialista em Inteligência Artificial da <strong>Quantum Automações</strong>.${extraProj}
+          <br/><br/>
+          Meu objetivo é entender o seu negócio sem termos técnicos complicados e mostrar como podemos economizar horas da sua equipe com IA.
+          <br/><br/>
+          Para começarmos, <strong>qual é o seu nome e o nome da sua empresa (ou ramo de atuação)?</strong>
+        `);
+      }, 500);
+    }
+
+    function handleMaxUserSubmit(e) {
+      e.preventDefault();
+      const inp = document.getElementById('max-input');
+      const text = inp.value.trim();
+      if (!text) return;
+      inp.value = '';
+      handleMaxInputText(text);
+    }
+
+    function buildWhatsAppHandoffButton() {
+      const nome = maxState.clientName || 'Visitante';
+      const emp = maxState.clientCompany || 'Não informada';
+      const nec = maxState.clientNeed || maxState.projectInterest || 'Diagnóstico de Automação e IA';
+      const resumo = `Olá, Equipe de Engenharia da Quantum Automações!\n\nConversei com o Agente Max no site e quero solicitar meu Diagnóstico Gratuito:\n• *Nome:* ${nome}\n• *Empresa/Ramo:* ${emp}\n• *Objetivo:* ${nec}`;
+      const url = 'https://wa.me/5511973340891?text=' + encodeURIComponent(resumo);
+      return `
+        <div class="mt-3 p-3 rounded-xl bg-[#110824] border border-[#FFD700]/40 space-y-2">
+          <div class="text-[11px] font-mono uppercase tracking-wider text-[#FFD700] font-bold">📋 Resumo Pronto para Engenharia:</div>
+          <div class="text-xs text-slate-300">
+            • <strong>Cliente:</strong> ${nome}<br/>
+            • <strong>Empresa/Ramo:</strong> ${emp}<br/>
+            • <strong>Foco:</strong> ${nec}
+          </div>
+          <a href="${url}" target="_blank" rel="noopener noreferrer" class="mt-2 w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#FFD700] to-[#FFC200] text-[#0A0A0A] font-extrabold text-xs shadow-lg hover:scale-[1.02] transition-all">
+            <span>🚀 Continuar com a Equipe de Engenharia no WhatsApp</span>
+          </a>
+        </div>
+      `;
+    }
+
+    function generateKnowledgeReply(text) {
+      const lower = text.toLowerCase();
+
+      // Price / Cost questions
+      if (lower.includes('preço') || lower.includes('preco') || lower.includes('valor') || lower.includes('custa') || lower.includes('orçamento') || lower.includes('orcamento')) {
+        return `
+          💰 <strong>Sobre investimento e valores:</strong><br/>
+          Aqui na Quantum nós não empurramos pacotes engessados — o valor é calculado <strong>sob medida</strong> para a necessidade real do seu projeto, garantindo que a automação se pague rapidamente com a economia de tempo da sua equipe.<br/><br/>
+          ✨ E o melhor: o seu <strong>Diagnóstico Inicial é 100% Gratuito</strong>! Nossa Equipe de Engenharia analisa o seu processo sem compromisso e já te apresenta o plano ideal.
+        `;
+      }
+
+      // GTPLAN / Compras / Planilhas / Notas
+      if (lower.includes('gtplan') || lower.includes('planilha') || lower.includes('nota') || lower.includes('compra') || lower.includes('fornecedor')) {
+        return `
+          📊 <strong>Automação de Planilhas, Compras e Notas Fiscais:</strong><br/>
+          Assim como fizemos no sistema <strong>GTPLAN</strong> do nosso portfólio, nós criamos uma solução que cruza pedidos de compra e notas fiscais em segundos, identifica entregas pendentes e até redige a cobrança para fornecedores atrasados automaticamente com IA!<br/><br/>
+          🔌 Integra direto com o seu Excel, PDFs, e-mails ou ERP atual, reduzindo em até <strong>90% o trabalho manual</strong>.
+        `;
+      }
+
+      // AuditMed / Auditoria / Reembolso / Documentos / Saúde
+      if (lower.includes('audit') || lower.includes('reembolso') || lower.includes('documento') || lower.includes('recibo') || lower.includes('pdf') || lower.includes('saúde') || lower.includes('med')) {
+        return `
+          🛡️ <strong>Auditoria Inteligente de Documentos e Financeiro:</strong><br/>
+          Com a mesma tecnologia do nosso <strong>AuditMed Ultra</strong>, nosso Agente de IA lê pastas inteiras de PDFs, notas fiscais, pedidos médicos e comprovantes PIX em segundos, apontando o que está aprovado e bloqueando cobranças indevidas.<br/><br/>
+          🔒 Tudo com <strong>100% de sigilo e proteção LGPD</strong>!
+        `;
+      }
+
+      // Agente de IA / WhatsApp / Atendimento
+      if (lower.includes('agente') || lower.includes('whatsapp') || lower.includes('atendimento') || lower.includes('chat') || lower.includes('bot')) {
+        return `
+          🤖 <strong>Agentes de IA Personalizados 24/7:</strong><br/>
+          Nós criamos Agentes de IA (assim como eu!) treinados especificamente com as regras da sua empresa para atender clientes no WhatsApp ou no site 24h por dia, qualificar oportunidades, agendar horários e tirar dúvidas na hora!
+        `;
+      }
+
+      // Site / Sistema Web / Clínica / Projetos
+      if (lower.includes('site') || lower.includes('sistema') || lower.includes('web') || lower.includes('clínica') || lower.includes('clinica') || lower.includes('projeto')) {
+        return `
+          💻 <strong>Sistemas Web Sob Medida & Sites de Alta Conversão:</strong><br/>
+          Desenvolvemos desde plataformas completas com Mentor de IA (como o <strong>Disciplina Dev</strong>) até sites profissionais de captação automática (como a <strong>Plataforma Clínica Online</strong>), entregando protótipos funcionais em <strong>poucos dias</strong>!
+        `;
+      }
+
+      // Default consultative response
+      return `
+        🚀 <strong>Excelente! A Inteligência Artificial da Quantum é perfeita para isso!</strong><br/>
+        Nós desenvolvemos a solução sob medida para você, integrando com as ferramentas que você já usa (WhatsApp, Planilhas Excel, PDFs, ERP), com entregas rápidas em poucos dias, atendimento <strong>100% online para todo o Brasil</strong> e proteção total pela <strong>LGPD</strong>.
+      `;
+    }
+
+    function handleMaxInputText(text) {
+      appendMaxMessage('user', text);
+
+      if (maxState.step === 'ask_name') {
+        // Extract name & optional company
+        const parts = text.split(/,| da | do | de | - |\/| empresa /i);
+        maxState.clientName = parts[0].trim();
+        maxState.clientCompany = parts.length > 1 ? parts.slice(1).join(' ').trim() : text;
+        maxState.step = 'ask_need';
+
+        showMaxTyping(() => {
+          if (maxState.projectInterest) {
+            maxState.clientNeed = `Solução baseada no projeto ${maxState.projectInterest}`;
+            maxState.step = 'ready_or_chat';
+            const reply = generateKnowledgeReply(maxState.projectInterest);
+            appendMaxMessage('max', `
+              Muito prazer, <strong class="text-[#FFD700]">${maxState.clientName}</strong>! 👏<br/><br/>
+              ${reply}<br/>
+              Já preparei o resumo do seu atendimento para encaminhar diretamente à nossa <strong>Equipe de Engenharia da Quantum Automações</strong> no WhatsApp para o seu <strong>Diagnóstico Gratuito</strong>:
+              ${buildWhatsAppHandoffButton()}
+            `);
+            renderMaxQuickButtons(quickNeedButtons);
+          } else {
+            appendMaxMessage('max', `
+              Muito prazer, <strong class="text-[#FFD700]">${maxState.clientName}</strong>! 👏<br/><br/>
+              Me conta: <strong>qual processo hoje toma mais tempo da sua rotina ou o que você gostaria de criar/automatizar com Inteligência Artificial?</strong><br/>
+              <span class="text-xs text-slate-400">(Você pode clicar em um dos botões abaixo ou digitar livremente):</span>
+            `);
+            renderMaxQuickButtons(quickNeedButtons);
+          }
+        }, 650);
+        return;
+      }
+
+      // Step 'ask_need' or 'ready_or_chat'
+      maxState.clientNeed = text;
+      maxState.step = 'ready_or_chat';
+      const reply = generateKnowledgeReply(text);
+
+      showMaxTyping(() => {
+        appendMaxMessage('max', `
+          ${reply}<br/><br/>
+          Perfeito, <strong>${maxState.clientName}</strong>! Já organizei todas as suas informações e vou encaminhar o seu resumo diretamente para a <strong>Equipe de Engenharia da Quantum Automações</strong> no WhatsApp para realizarmos o seu <strong>Diagnóstico 100% Gratuito</strong>.
+          ${buildWhatsAppHandoffButton()}
+          <div class="mt-2 text-[11px] text-slate-400">Se tiver mais alguma dúvida sobre prazos, segurança LGPD ou integrações, pode me perguntar aqui mesmo!</div>
+        `);
+      }, 700);
     }
 
     function handleContactSubmit(e) {
